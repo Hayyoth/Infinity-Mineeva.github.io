@@ -4,8 +4,6 @@ const exit = document.querySelector("#exit-btn");
 const navLinks = document.querySelectorAll(".nav__link");
 const projectsDiv = document.querySelector(".projects");
 
-
-
 // function to open the nav menu on mobile
 menu.addEventListener("click", () => {
   document.querySelector(".nav").classList.add("open-nav");
@@ -23,9 +21,13 @@ navLinks.forEach((link) => {
   });
 });
 
-
-
-
+// making reCAPTCHA required
+window.onload = function () {
+  var el = document.getElementById("g-recaptcha-response");
+  if (el) {
+    el.setAttribute("required", "required");
+  }
+};
 
 /* =====================
     FETCH PROJECTS LIST
@@ -37,7 +39,6 @@ async function getAllProjects() {
   let projects = await response.json();
   return projects;
 }
-
 
 // function to set up html containers for each project retrieved
 function getProjectHtml(aProject) {
@@ -65,13 +66,16 @@ function getProjectHtml(aProject) {
 // function to display projects in the 'projects' div of html doc
 function displayProjects(allProjects) {
   projectsDiv.innerHTML = `
-        ${allProjects.map((project) => getProjectHtml(project)).join('')}
+        ${allProjects.map((project) => getProjectHtml(project)).join("")}
     `;
 }
 
 // call the function
 getAllProjects()
   .then((projects) => {
-        displayProjects(projects);
-    })
-  .catch((error) => (projectsDiv.innerHTML = `Oops! Something went wrong! Error: ${response.status}`));
+    displayProjects(projects);
+  })
+  .catch(
+    (error) =>
+      (projectsDiv.innerHTML = `Oops! Something went wrong! Error: ${response.status}`)
+  );
