@@ -1,115 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/9e378a2b3f.js" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-        <title>Sonji Goodman Portfolio</title>
-    </head>
-    <body>
-        <header>
-            <img class='logo' src='./images/SG_COLOR_LOGO.svg'/>
-            <svg class="menu" id="menu-btn" aria-label="menu button"viewBox="0 0 27.329 17">
-                <g transform="translate(-415.671 -19)">
-                    <line  x1="24.329" transform="translate(417.171 34.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
-                    <line x1="24.329" transform="translate(417.171 27.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
-                    <line x1="17" transform="translate(424.5 20.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3"/>
-                </g>
-            </svg>
-            <nav class='nav'>
-                <ul class='nav__list'>
-                    <li class='exit' id='exit-btn' aria-label="exit button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48.968" height="48.968" viewBox="0 0 48.968 48.968">
-                            <g transform="translate(-378.092 -80.939)">
-                                <path id="Path_21" data-name="Path 21" d="M383,82l-46.847,46.847" transform="translate(43)" fill="none" stroke="#000" stroke-width="3"/>
-                                <path id="Path_22" data-name="Path 22" d="M336.153,82l46.673,46.673" transform="translate(43)" fill="none" stroke="#000" stroke-width="3"/>
-                            </g>
-                        </svg>
-                    </li>
-                    <li><a href="#home" class='nav__link'>Home</a></li>
-                    <li><a href="#about" class='nav__link'>About Me</a></li>
-                    <li><a href="#tech" class='nav__link'>Tech Stack</a></li>
-                    <li><a href="#work" class='nav__link'>My Work</a></li>
-                    <li><a href="#contacts" class='nav__link'>Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
-
-     <div class='container'>
-        
-        <section class='intro' id='home'>
-            <div class='intro-text'>
-                <h1 class='title'>Hi! I'm Sonji Goodman</h1>
-                <p class='headline'>Bringing beautiful interfaces and web apps to life one page at a time.</p>
-                <p class='btn'><a href="#work">My Work</a></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9e378a2b3f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Sonji Goodman's Portfolio</title>
+  </head>
+  <body>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./images/SG_COLOR_LOGO.svg" alt="logo" class="logo" />
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li><a href="#home" class="scroll-link">Home</a></li>
+              <li><a href="#work" class="scroll-link">My Work</a></li>
+              <li><a href="#tech" class="scroll-link">Tech Stack</a></li>
+              <li><a href="#about" class="scroll-link">About Me</a></li>
+              <li><a href="#contacts" class="scroll-link">Contacts</a></li>             
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- banner/intro -->
+      <div class="banner">
+        <div class="home-container">
+          <h1 class="intro">Hi! I'm <span class="accent">Sonji Goodman</span></h1>
+          <p class="home-intro">
+            I'm a self-taught Web Developer bringing beautiful interfaces
+            and web apps to life one line of code at a time.
+          </p>
+          <a href="#work" class="scroll-link btn">My Work</a>
+        </div>
+        <img src="images/Avatar.jpg" alt="avatar" class="avatar" />
+      </div>
+    </header>
+    <!-- main body content -->
+    <div class="body-container">
+      <!-- section start -->
+      <section class="section" id="work">
+        <div class="title">
+          <h2>My <span class="accent">Work</span></h2>
+        </div>
+        <div class="project-container content">
+          <div class="project-details">
+            <p class="project-counter">Project <span id="number">1</span> / <span id="total">1</span></p>
+            <p class="project-name" id="projectName">Bootcamp testimonials</p>
+            <p class="project-desc" id="projectDesc">
+              Cycle through the positive reviews of several coding bootcamp
+              graduates.
+            </p>
+            <div class="project-icons" id="projectIcons">
+              <p class="project-tools">tech used:</p>
+              <div class="tech-button-container">
+                <p class="tech-button" id="techButton">javascript</p>
+              </div>
             </div>
-            <img src="images/Avatar.jpg" alt="avatar" class='avatar'>
-        </section>
-
-        
-        <section class='about-me' id='about'>
-            <div class='about-text'>
-                <h1 class='title'>About Me</h1>
-                <p>After spending several years doing administrative work, I chose to switch careers and go down the path of Frontend Web Development.</p>
-                <p>When not building and designing apps, I love writing, drawing, and playing video games.</p>
+            <div class="project-links">
+              <p class="demo-link">
+                <a
+                  href="#" target="_blank" id="demoLink">Go to demo <i class="far fa-arrow-alt-circle-right"></i
+                ></a>
+              </p>
+              <p class="repo-link" >
+                <a href="#" target="_blank" id="repoLink"
+                  >GitHub Repo <i class="far fa-arrow-alt-circle-right"></i
+                ></a>
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="project-nav">
 
-       
-        <section class='tech-stack' id='tech'>
-            <h1 class='title'>Tech Stack</h1>
-            <div class='tech-icons'>
-                <img src="images/html5-original.svg" alt="HTML 5 Logo" />
-                <img src="images/css3-original.svg" alt="CSS3 Logo" />
-                <img src="images/javascript-original.svg" alt="JavaScript Logo" />
+            <div class="project-image">
+              <img
+                src="./images/Projects/Random-Cat-Facts.jpg"
+                class="project-img"
+                id="project-img"
+                alt="cats"
+              />
             </div>
-
-        </section>
-
-
-       
-        <section class='my-work' id='work'>
-            <h1 class='title'>My Work</h1>
-                <div class='projects'></div>
-           
-
-            <p>More projects available <a href="https://github.com/Infinity-Mineeva">on my GitHub</a></p>
-        </section>
-    </div>   
-
-
-    <div class="contact-form">
-        <h3>Next Step? Get in touch!</h3>
-        <p>Fill out this form and let's discuss what I can do for you!</p>
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mnqlgpng" method="post">
+            <!-- button container -->
+            <div class="button-container">
+              <p class="arrow left-arrow" id="leftArrow">&#10094;</p>
+  
+              <p class="arrow right-arrow" id="rightArrow">&#10095;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of section -->
+      <!-- section start -->
+      <section class="section" id="tech">
+        <div class="title">
+          <h2>Tech <span class="accent">Stack</span></h2>
+        </div>
+        <div class="tech-icons">
+          <img src="images/html5-original.svg" alt="HTML 5 Logo" />
+          <img src="images/css3-original.svg" alt="CSS3 Logo" />
+          <img src="images/javascript-original.svg" alt="JavaScript Logo" />
+        </div>
+      </section>
+      <!-- end of section -->
+      <!-- section start -->
+      <section class="section" id="about">
+        <div class="title">
+          <h2>About <span class="accent">Me</span></h2>
+        </div>
+        <div class="about-text content">
+          <p>
+            After 19 years of doing various clerical jobs (from adminstrative
+            work to data entry), I chose to make a career switch and go down the path of Web Development.
+          </p>
+          <br />
+          <p>
+            When not learning, building and designing apps, I love writing, drawing, and
+            playing video games.
+          </p>
+        </div>
+      </section>
+      <!-- end of section -->
+      <!-- section start -->
+      <section class="section" id="contacts">
+        <div class="title">
+          <h2>Contact <span class="accent">Me</span></h2>
+        </div>
+        <p>
+          <strong>Next Step? <span class="accent">Get in touch!</span></strong>
+          Fill out this form and let's discuss what I can do for you!
+        </p>
+        <div class="contact-form content">
+          <form
+            id="fs-frm"
+            name="simple-contact-form"
+            accept-charset="utf-8"
+            action="https://formspree.io/f/mnqlgpng"
+            method="post"
+          >
             <fieldset id="fs-frm-inputs">
               <label for="full-name">Full Name</label>
-              <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+              <input
+                type="text"
+                name="name"
+                id="full-name"
+                placeholder="First and Last"
+                required=""
+              />
               <label for="email-address">Email Address</label>
-              <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+              <input
+                type="email"
+                name="_replyto"
+                id="email-address"
+                placeholder="email@domain.tld"
+                required=""
+              />
               <label for="message">Message</label>
-              <textarea rows="5" name="message" id="message" placeholder="What can I do for you today?" required=""></textarea>
-              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-              <div class="g-recaptcha" data-sitekey="6LdkkcsbAAAAAJhntK5UxT1CqS28AE3_qFNbHWst"></div>
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="What can I do for you today?"
+                required=""
+              ></textarea>
+              <input
+                type="hidden"
+                name="_subject"
+                id="email-subject"
+                value="Contact Form Submission"
+              />
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LdkkcsbAAAAAJhntK5UxT1CqS28AE3_qFNbHWst"
+              ></div>
             </fieldset>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" />
           </form>
 
+          <!-- social media -->
+          <div class="social-media">
+            <p>
+              You can also catch me on the following
+              <strong><span class="accent">social media sites:</span></strong>
+            </p>
+            <div class="social-media-icons">
+              <ul class="media-list">
+                <li>
+                  <a href="https://github.com/Infinity-Mineeva"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                    >
+                      <g fill="#181616">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
+                        />
+                        <path
+                          d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
+                        />
+                      </g></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/sonjigoodman/"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                    >
+                      <path
+                        fill="#0076b2"
+                        d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"
+                      /></svg
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/sonji_it"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 128 128"
+                    >
+                      <path
+                        d="M40.254 127.637c48.305 0 74.719-48.957 74.719-91.403 0-1.39 0-2.777-.075-4.156 5.141-4.547 9.579-10.18 13.102-16.633-4.79 2.602-9.871 4.305-15.078 5.063 5.48-4.02 9.582-10.336 11.539-17.774-5.156 3.743-10.797 6.38-16.68 7.801-8.136-10.586-21.07-13.18-31.547-6.32-10.472 6.86-15.882 21.46-13.199 35.617C41.922 38.539 22.246 26.336 8.915 6.27 1.933 20.94 5.487 39.723 17.022 49.16c-4.148-.172-8.207-1.555-11.832-4.031v.41c0 15.273 8.786 28.438 21.02 31.492a21.596 21.596 0 01-11.863.543c3.437 13.094 13.297 22.07 24.535 22.328-9.305 8.918-20.793 13.75-32.617 13.72-2.094 0-4.188-.15-6.266-.446 12.008 9.433 25.98 14.441 40.254 14.422"
+                        fill="#1da1f2"
+                      /></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of section -->
     </div>
-        <footer>
-            <p>Created by Sonji Goodman 💻</p>
-            <ul class='contacts' id='contacts'>
-                <h4>Other online profiles:</h4>
-                <li><a href="https://github.com/Infinity-Mineeva">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/sonjigoodman/"">LinkedIn</a></li>
-                <li><a href="https://twitter.com/sonji_it">Twitter</a></li>
-            </ul>
-
-        </footer>
-        <script src="script/index.js"></script>
-    </body>
+    <!-- end of body-container -->
+    <footer class="section">
+      <p>Copyright &copy; <span id="date">2021</span> 💻 Sonji Goodman</p>
+    </footer>
+    <a href="#home" class="scroll-link top-link"
+      ><i class="fas fa-arrow-up"></i
+    ></a>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
