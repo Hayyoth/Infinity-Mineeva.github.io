@@ -326,6 +326,10 @@ BUTTON STYLES
   font-size: 1.2rem;
 }
 
+#work > p {
+  margin-top: 1em;
+}
+
 #total {
   color: var(--darkGreen);
   font-weight: var(--heavyWeight);
