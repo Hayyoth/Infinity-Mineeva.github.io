@@ -1,5 +1,5 @@
 # Files to ignore
 
 .DS_Store
-images/leaves-pattern.zip
-images/leaves-pattern/*
+leaves-pattern.zip
+**/leaves-pattern/
