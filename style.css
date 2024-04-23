@@ -212,7 +212,7 @@ nav {
   }
 
   .links a {
-    displau: block;
+    display: block;
     margin: 0 1rem;
     padding: 0;
     transition: var(--transition);
@@ -636,7 +636,10 @@ BUTTON STYLES
   opacity: 0;
 }
 
-// SOCIAL MEDIA ICONS
+
+/* ===================================
+    SOCIAL MEDIA ICONS
+====================================== */
 
 .media-list {
   width: 100%;
@@ -680,7 +683,7 @@ svg path:nth-child(1) {
   #contacts > div.contact-form {
     width: 100%;
     display: flex;
-    flex-drection: column;
+    flex-direction: column;
     justify-content: space-between;
   }
   #fs-frm {
